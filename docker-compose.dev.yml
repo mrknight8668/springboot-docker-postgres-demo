@@ -1,0 +1,32 @@
+version: '3.8'
+#containers => services
+services:
+  postgres-springboot-service:
+    image: postgres:16.2
+    container_name: postgres-springboot-container
+    ports:
+      - 5435:5432    
+    volumes:
+      - postgres-springboot-data:/var/lib/postgresql/data
+      - postgres-springboot-config:/etc/postgresql/postgresql.conf
+    networks:
+      - backend
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+  springboot-docker-service:
+    image: supermac8668/springboot-docker:v1.0.1
+    container_name: springboot-docker-container
+    ports:
+      - 8085:8083
+    volumes:
+      - ./:/app
+    networks:
+      - backend
+#create network     
+networks:
+  backend:
+    name: springboot-app-network
+volumes:
+  postgres-springboot-data:
+  postgres-springboot-config:

@@ -1,0 +1,4 @@
+com/example/demodocker/repository/StudentRepository.class
+com/example/demodocker/entity/Student.class
+com/example/demodocker/DemodockerApplication.class
+com/example/demodocker/controller/StudentController.class

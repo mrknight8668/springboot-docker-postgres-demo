@@ -1,0 +1,4 @@
+/app/src/main/java/com/example/demodocker/repository/StudentRepository.java
+/app/src/main/java/com/example/demodocker/entity/Student.java
+/app/src/main/java/com/example/demodocker/DemodockerApplication.java
+/app/src/main/java/com/example/demodocker/controller/StudentController.java
